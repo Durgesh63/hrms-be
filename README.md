@@ -227,15 +227,15 @@ Common HTTP Status Codes:
 
 ## Key Features
 
-✅ **User Authentication** - Secure JWT-based authentication with refresh tokens
-✅ **Employee Management** - Full CRUD operations for employees
-✅ **Attendance Tracking** - Mark and query attendance with validation
-✅ **Dashboard Stats** - Real-time statistics on attendance and employees
-✅ **Date Filtering** - Advanced filtering by exact date or date range
-✅ **Error Handling** - Comprehensive error handling with detailed messages
-✅ **Pagination** - Support for paginated responses
-✅ **Validation** - Input validation at controller and model levels
-✅ **Security** - Password hashing, JWT tokens, middleware authentication
+- **User Authentication** - Secure JWT-based authentication with refresh tokens
+- **Employee Management** - Full CRUD operations for employees
+- **Attendance Tracking** - Mark and query attendance with validation
+- **Dashboard Stats** - Real-time statistics on attendance and employees
+- **Date Filtering** - Advanced filtering by exact date or date range
+- **Error Handling** - Comprehensive error handling with detailed messages
+- **Pagination** - Support for paginated responses
+- **Validation** - Input validation at controller and model levels
+- **Security** - Password hashing, JWT tokens, middleware authentication
 
 ## Environment Configuration
 
