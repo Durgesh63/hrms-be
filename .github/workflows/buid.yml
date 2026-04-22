@@ -7,19 +7,17 @@ jobs:
     name: Test on Runner 2
     runs-on: [self-hosted, windows, server-2019, runner-2]
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create file and write text on Desktop
+      - name: Create file on Desktop with text
         shell: powershell
         run: |
-          $desktop = [Environment]::GetFolderPath("Desktop")
-          $file = "$desktop\test.txt"
-          "durgesh" | Out-File -FilePath $file -Encoding utf8
-          Write-Host "File created: $file"
-
+          $desktop = "$env:USERPROFILE\Desktop"
+          $file = Join-Path $desktop "test.txt"
+          "test" | Out-File -FilePath $file -Encoding utf8
       - name: Confirm file created
         shell: powershell
         run: |
-          $desktop = [Environment]::GetFolderPath("Desktop")
+          $desktop = "$env:USERPROFILE\Desktop"
           Get-ChildItem $desktop
