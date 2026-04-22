@@ -1,0 +1,25 @@
+name: Test Runner 2
+
+on: [push]
+
+jobs:
+  build:
+    name: Test on Runner 2
+    runs-on: [self-hosted, windows, server-2019, runner-2]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create file and write text on Desktop
+        shell: powershell
+        run: |
+          $desktop = [Environment]::GetFolderPath("Desktop")
+          $file = "$desktop\test.txt"
+          "durgesh" | Out-File -FilePath $file -Encoding utf8
+          Write-Host "File created: $file"
+
+      - name: Confirm file created
+        shell: powershell
+        run: |
+          $desktop = [Environment]::GetFolderPath("Desktop")
+          Get-ChildItem $desktop
